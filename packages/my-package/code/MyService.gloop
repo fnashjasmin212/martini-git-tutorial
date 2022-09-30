@@ -14,8 +14,26 @@
             "lines": [
                 {
                     "type": "set",
-                    "expression": "\"Hello $name!\"",
+                    "expression": "\"Hello ${name.toUpperCase()}!\"",
                     "evaluate": true,
+                    "to": [
+                        "message"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "invokeCode",
+            "className": "io.toro.martini.LoggerMethods",
+            "methodName": "info",
+            "parameters": [
+                "java.lang.String"
+            ],
+            "inputs": [
+                {
+                    "from": [
+                        "message"
+                    ],
                     "to": [
                         "message"
                     ]
