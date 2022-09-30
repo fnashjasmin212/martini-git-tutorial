@@ -1,0 +1,26 @@
+{
+    "input": [
+        {
+            "name": "name"
+        }
+    ],
+    "output": [
+        {
+            "name": "message"
+        }
+    ],
+    "steps": [
+        {
+            "lines": [
+                {
+                    "type": "set",
+                    "expression": "\"Hello $name!\"",
+                    "evaluate": true,
+                    "to": [
+                        "message"
+                    ]
+                }
+            ]
+        }
+    ]
+}
